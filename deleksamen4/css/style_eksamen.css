@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap');
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+/*
+
+La inn kartet her og: For å unngå feilmelding: @import url('https://www.google.com/maps/place/H%C3%B8gskolen+i+%C3%98stfold/@59.1292475,11.3506146,17z/data=!3m1!4b1!4m5!3m4!1s0x464412f0d344246f:0x4e47f19c99b253b1!8m2!3d59.1292475!4d11.3528033');
+
+/*Kilde fargekoder: https://www.kalkuler.com/kalkulator/web/html-fargenavn/ */ 
+/*Kilde: border, grid og layout.
+: https://codeburst.io/css-grid-layout-simple-guide-e0296cf14fe8
+: https://stackoverflow.com/questions/47882924/preventing-double-borders-in-css-grid
+: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns*/
+*{
+    box-sizing: border-box;
+}
+     
+body{
+    background: #E3E3E3;
+    font-family: "Montserrat", sans-serif;  
+    font-size: 17px;
+    display: grid;
+} 
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr;
+    grid-template-areas:"header header header"
+                        "nav nav nav"
+                        "main main main"
+                        "footer footer footer";
+}
+
+header{
+    display: grid;
+    background-color: rgb(47, 46, 46);
+    padding: 1rem;
+    grid-area: header;
+}
+
+.header-img {
+    display: grid;
+    background: url("../bilder/banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+li{
+    list-style: none;
+}
+
+a.nav-menu link{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: grid;
+    padding: 0 40px;
+    margin: 1rem;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: black;
+    padding: 1rem;
+    justify-content: space-between;
+    flex-flow: row wrap-reverse;
+}
+
+#logo{
+    display: grid;
+    width: 14rem;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+    color: #d3d3d3;
+}
+
+.nav-link:hover{
+    color: rgb(62, 62, 169);
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#main{
+    display:grid;
+    grid-area: main;
+}
+
+#quote{
+    display: grid;
+    text-align: center;
+    margin-top: 0;
+}
+
+#mini-header{
+    display: flex;
+    text-align: center;
+    line-height: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+#mini-header p{
+    line-height: 2.5rem;
+}
+
+.overskrift-innholdssider{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 1.5em;
+    margin: 0.67em 0;
+    display: flex;
+    justify-content: center;
+}
+
+figcaption{
+    display: flex;
+    justify-self: center;
+}
+
+.share-social-container{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    position: fixed;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.share-social-container{
+    font-size: 32px;
+}
+
+.share-social-container{
+    transition: 500ms;
+}
+
+.share-social-container a:hover{
+    transform: scale(1.2);
+}
+
+.share-social-container .fa-facebook{
+    color: #1877F2; 
+}
+
+.share-social-container .fa-instagram{
+    color: #c13584; 
+}
+
+.share-social-container .fa-linkedin{
+    color: #0077b5; 
+}
+
+.share-social-container .fa-twitter{
+    color: #1da1f2; 
+}
+
+.share-social-container .fa-pinterest{
+    color: #e60023; 
+}
+
+#article-container{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+#article-container-2{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2vh;
+}
+
+.article-content{
+    display: grid;
+    align-content: baseline;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+p{
+    text-align: center;
+    margin: 1.5vh;
+    padding: 2vh;
+    line-height: 2rem;
+}
+
+.listepunkt{
+    display: flex;
+    flex-flow: column-reverse;
+    margin-left: 2rem;
+}
+
+.listepunkt li{
+    list-style: disclosure-closed;
+    padding: 0.5rem;
+}
+
+.card-title-analyse{
+    text-align-last: center;
+}
+
+.article-image{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.webaim_analyse{
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-gap: 2rem;
+}
+
+.webaim_analyse-2{
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 3fr 9.5fr;
+    grid-gap: 2rem;
+}
+
+.article-image-analyse{
+    max-width: 90%;
+}
+
+.article-image-lighthouse{
+    width: 90%;
+}
+
+.webaim_img{
+    width: 90%;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px 20px;
+    opacity: 1;
+    object-fit: cover;
+}
+
+.article-card {
+    background: #d3d3d3;
+    border-radius: 15px;
+    transition: 0.3s;
+    padding: 5vh;
+    margin: 4vh;
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.article-card-2 {
+    display: flex;
+    flex-grow: 1;
+    margin: 2vh;
+    padding: 1vh;
+}
+
+.article-card-top{
+    display: flex;
+    margin: 2vh;
+    padding: 1vh;
+    flex-direction: row-reverse;
+}
+
+.article-image-2 {
+    display: flex;
+    width: 100%;
+}
+
+.article-card:hover{
+    box-shadow: 0 4px 20px 0 rgba(76, 76, 76, 0.2);
+    cursor: pointer;
+}
+
+.card-category{
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+.article-content .card-category {
+    font-size: 1.08rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 1000;
+    color: darkblue;
+    text-decoration: none;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.article-content .card-title {
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 1vh;
+    flex-flow: row wrap;
+    white-space: nowrap;
+}
+
+.article-content .card-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #2f2e2e;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title-contact{
+    text-align: center;
+}
+
+.article-content-contactform{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+label{
+    -webkit-text-stroke: thin;
+    display: grid;
+}
+
+input .submit{
+    justify-items: center;
+}
+
+form{
+    align-self: center;
+}
+
+#map{
+    background-color:#2f2e2e;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 3vh;
+    color: white;
+    text-align: center;
+}
+
+iframe{
+    height: 300px;
+    width: 900px;
+    margin-bottom: 4vh;
+}
+
+.caption{
+    display: flex;
+    background-color: #2f2e2e;
+    color: #ffff;
+    text-align: center;
+    padding: 4vh;
+    font-size: x-large;
+    border-radius: 20px 20px;
+    justify-content: space-around;
+}
+
+.tb-overskrift{
+    display: flex;
+    font-weight: 800;
+    flex-flow: column wrap;
+    border-bottom: solid; 
+    align-self: stretch;
+    justify-content: center;
+}
+
+#tabell{
+    display: grid;
+    background-color: white;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100vh;
+    padding: 1vh;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px 20px;
+}
+
+.tb-text{
+    display: flex;
+    flex-flow: column wrap;
+    border-bottom: 1px solid black;
+    align-self: stretch;
+    justify-content: center;
+}
+
+.tabell-section{
+    width: 100%;
+    padding: 3vh;
+    margin-bottom: 4vh;
+}
+
+#tabell-analyse{
+    display:grid; 
+    grid-template-columns: repeat(3, 1fr);
+    text-align-last: center;
+    background-color: white;
+    outline: groove;
+}
+
+
+#kilder{
+    display: grid;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 3vh;
+}
+
+.kilder-head{
+    text-align: center;
+}
+
+.kilder-links{
+    display: flex;
+    text-align: left;
+}
+
+#footer{
+text-align: center;
+padding: 15px;
+background-color: black;
+color: white;
+display: block;
+text-decoration: none;
+justify-content: space-between;
+grid-area: footer;
+}
+
+.someicons #app{
+    display: grid;
+    width: 20%;
+}
+
+.someicons .appen {
+    justify-content: left;
+}
+
+.someicons{
+    display: flex;
+    justify-content: space-around;
+    padding: unset;
+}
+
+.someicons a i{
+    color: #d3d3d3;
+    font-size: 7vh;
+}
+
+.someicons a{
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(62, 62, 169);
+}
+
+@media screen and (max-width: 750px){
+    #grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";    
+        grid-gap: 0;
+    }
+
+    .webaim_analyse{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #logo{
+        margin-left: 0;
+    }
+
+    h1{
+        line-height: 2.5rem;
+        padding: 1.5vh;
+    }
+
+    #mini-header{
+        line-height: 1.8rem;
+        padding: 2vh;
+    }
+
+    figcaption{
+        display: grid;
+    }
+
+    a.card-category {
+        padding: 2vh;
+    }
+
+    #article-container {
+        display:flex;
+        flex-flow: row wrap;
+    }
+
+    .article-card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .article-card-2{
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        width: 100%;
+        padding-bottom: 2vh;
+    }
+
+    .article-card-top{
+        flex-wrap: wrap;
+    }
+
+    p{
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    .listepunkt li {
+        padding: 1rem;
+    }
+
+    #tabell-section{
+        width: 100%;
+        margin-bottom: 4vh;
+        font-size: smaller;
+    }
+
+    #tabell{
+        margin-bottom: 2vh;
+    }
+
+    #caption{
+        margin-right: 2vh;
+    }
+
+    .tb-text{
+        display: flex;
+        border-bottom: 1px solid black;
+        flex-direction: column;
+        align-self: stretch;
+        justify-content: center;
+        padding: 0.2rem;
+    }
+
+    .tb-text-nede{
+        border-bottom: none !important;
+        display: flex;
+        align-self: stretch;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .webaim_analyse{
+        display:flex;
+        flex-flow: row wrap;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    #footer{
+        flex-grow: 1;
+    }
+
+    .hamburger{
+        display: block;
+        justify-self: flex-start;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        display: flex; 
+        position: absolute;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgb(47, 46, 46);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        justify-content: center;
+    }
+    .nav-item{
+        margin: 1rem 1rem;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 754px){
+    #grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+                    "header"
+                    "nav"
+                    "main"
+                    "footer"; 
+    } 
+
+    .webaim_analyse{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .nav-menu{
+        gap: 0;
+    }
+
+    #kilder{
+        padding: 0;
+    }
+}
+
+@media (max-width: 550px){
+    .share-social-container {
+        transform: unset;
+        top: unset;
+        justify-content: center;
+        left: 0;
+        margin: 0;
+        bottom: 0;
+        width: 100%;
+        flex-direction: row;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+        padding: 15px 0;
+    }
+
+    .share-social-container a{
+        margin: 0 32px; 
+    }
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+    <head>
+        <meta name="description" content="Webutviklingsverktøy og analysering av egen webside. Lær deg å bruke webaim.org, lighthouse og screenshots av disse resultater fra analyseverktøyene.">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta property="og:title" content="Viktige analyseverktøy for din webside">
+        <meta property="og:url" content="https://itstud.hiof.no/~thhestsv/eksamen/analyse.html">
+        <meta property="og:image" content="lighthouse_score">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Lær om analyseverktøy og hvilke som finnes, for å gjøre din side enda bedre.">
+        <meta property="og:image:width" content="1000">
+        <meta property="og:image:height" content="580">
+        <meta name="twitter:card" content="summery_large_image">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style_eksamen.css">
+        <link rel="icon" type="image/x-icon" href="bilder/vlogo.png">
+        <title>Analyse og resultater for å optimaliserer din webside</title>
+    </head>
+        <body>
+            <div id="grid-container">
+                <header itemscope class="header-img">
+                    <a href="index.html"><img itemprop="image" id="logo" src="bilder/vlogo.png" alt="Til startsiden."></a>
+                    <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Hjem</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="uu_vs_seo.html" class="nav-link">UU vs SEO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="cms.html" class="nav-link">CMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="analyse.html" class="nav-link">Analyse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="Kontaktoss.html" class="nav-link">Kontakt oss</a>
+                            </li>
+                        </ul>
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+            </header>
+                    <div class="share-social-container">
+                        <a href="https://www.facebook.com/Henriettetinahestsveen" aria-label="Del denne siden på Facebook" class="facebook-knapp" aria-hidden="true">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Del denne siden på Instagram" class="instagram-knapp" aria-hidden="true">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Del denne siden på Twitter" class="twitter-knapp" aria-hidden="true">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/henriette-hestsveen/" aria-label="Del denne siden på Linkedin" class="linkedin-knapp" aria-hidden="true">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+
+        <main itemscope itemtype="https://schema.org/Article" id="main-container">
+            <h1 itemprop="name" class="overskrift-innholdssider">Analysering av nettside:</h1>
+            <p>Resultater fra verktøyene Webaim og Lighthouse. Og endringer som er implementert, for å øke totalt resultat og fjerne errors. Starter med Lighthouse score:</p>
+                <article class="article-card-2">
+                        <div class="article-content"> 
+                            <h2 class="card-category">Analyse</h2>
+                            <h3 class="card-title" itemprop="name">Lighthouse score:</h3>
+                                <p class="card-text">Resultater fra "lighthouse" testen av websiden, 
+                                    ga gode/høye score. På rundt 90%, jeg ser og forstår at det er bildene som er et sårt punkt
+                                    og de gjør mindre "reaktiv" og kan dempe opplastningshastigheten. Utenom dette, ønsker jeg "SEO" litt høyere, slik at siden blir "funnet" kjappere via Google. 
+                                    Derfor tar jeg inn tipset om Meta description tag, denne gir en hel beskrivelse på din side. 
+                                    Her er det viktig med en ordentlig beskrivelse, som forklarer godt hva din side faktisk inneholder. 
+                                </p>
+                                <figure class="article-image-lighthouse">
+                                    <img itemprop="image" src ="bilder/lighthouse.PNG" alt="bilde lighthouse resultater, score på rundt 90%.">
+                                </figure>
+                                <div class="article-content-analyse">
+                                    <h3 class="card-title" itemprop="name">Endringer gjort basert på Lighthouse: For å øke SEO score og performance:</h3>
+                                        <ul class="listepunkt">
+                                            <li>Legge inn Meta description tag, med tilsvarende utfyllende tekst. På alle sider på nettsiden, eksempelvis: meta name="description" og definere content.</li>
+                                            <li>Justere bildene størrelsene på alt av bilder, dermed endret jeg img-taggen til max-width: 100% istedenfor width: 100%. Uten å forringe kvaliteten på bildene</li>
+                                            <li>Legge inn enda mer Microdata beskrivelser på alle sidene - artiklene og bilder, eksempelvis itemprop="name" og img itemprop="image" id="logo" for <em>alle</em> artikkel titlene/overskrifter</li>
+                                        </ul>
+                                    </div>
+                                    <figure class="article-image-lighthouse">
+                                        <img itemprop="image" src ="bilder/resultat_bedre_score.PNG" alt="Ny score fra Lighthouse, ca 100%. Med en 5% bedring fra første score.">
+                                        <p>Screenshot med ny og bedre score, desktop versjon. Økning i SEO score.</p>
+                                    </figure>
+                                </div>
+                                <div class="article-content"> 
+                                    <h2 class="card-category">Analyse</h2>
+                                    <h3 class="card-title" itemprop="name">Lighthouse hovedpunkt:</h3>
+                                    <p class="card-text">Her er et screenshot, som viser til at bildestørrelsene gjør at siden opplastes
+                                        tregere, altså det tar ca 16 sekunder å laste opp bildene på siden. Skal teste om jeg kan manuelt justere å sette en fast pixelstørrelse, i CSS. 
+                                    </p>
+                                    <figure class="article-image-analyse">
+                                        <img itemprop="image" src="bilder/lighthouse_muligheter.PNG" alt="Lighthouse score, bildestørrelse gjør at siden lastes opp tregere.">
+                                    </figure>
+                                    <figure class="article-image-analyse">
+                                        <img itemprop="image" src="bilder/lighthouse_score.PNG" alt="Generell score på hastighet, ca en speedindex på 1.1 sekund.">
+                                    </figure>
+                                    <h3 class="card-title" itemprop="name">Resultat av lighthouse test på desktop:</h3>
+                                    <p class="card-text">Her er et screenshot, som viser til at bildestørrelsene gjør at siden opplastes
+                                        tregere, altså det tar ca 16 sekunder å laste opp bildene på siden. Skal teste om noe kan endres med vidde og høyde. 
+                                    </p>
+                                    <div class="article-content"> 
+                                        <h2 class="card-category">Analyse</h2>
+                                        <h3 class="card-title" itemprop="name">Lighthouse mobilversjon:</h3>
+                                        <p class="card-text">Her er et screenshot, som viser til at bildestørrelsene gjør at siden opplastes
+                                            tregere, altså det tar ca 16 sekunder å laste opp bildene på siden. Dette gjør noe med den totale Performance til nettsiden. 
+                                            Endrer dette ved å sette max width og height til 100%, på alle bildene på nettsiden. Ny score er nå 77%. 
+                                        </p>
+                                        <figure class="article-image-analyse">
+                                            <img itemprop="image" src="bilder/mobilversjon_uu_forstorebilder.PNG" alt="Skjermbilde av lighthouse score, ca 53% i performance.">
+                                            <p>Screenshot hentet fra Lighthouse: score av mobilversjon.</p>
+                                            <img itemprop="image" src="bilder/nytest_lighthouse_mobil.PNG" alt="Skjermbilde av lighthouse score, nå 77% i performance.">
+                                            <p>Screenshot hentet fra Lighthouse: resultat av endringer for å endre bildestørrelser.</p>
+                                        </figure>
+                                        </div>
+                                </div>
+                            </article>
+                            
+                                        <div class="article-content"> 
+                                            <h2 class="card-category">Analyse</h2>
+                                            <h3 class="card-title" itemprop="name">Webaim: resultater</h3>
+                                                <p class="card-text">Totalt sett 3 erros, dette er grunnet de sosiale medier knappene i footer, ikke hadde Aria-labels. De 7 andre alerts er
+                                                    linker som lenker til det samme stedene, eksempelvis at et artikkelkort har en overskrift som du kan trykke på for å komme til innholdssiden. 
+                                                    Andre ting var at det var understreking inne i paragrafer, dette var egentlig for å illustrere noen poeng. Men jeg ser nå at dette var unødvendig og bare 
+                                                    forvirrende for lesere. De siste punktene var "skipped head-level", og alle sider på en nettside skal ha strukturell riktig head-levels. h1, h2, h3. 
+                                                </p>
+                                                <figure class="article-image-analyse">
+                                                    <img itemprop="image" src="bilder/webaim_analyse.PNG" alt="Skjermbilde av webaim resultater, 3 errorer. Som gjelder sosiale medier lenker, de må ha Aria-label.">
+                                                </figure>
+                                                <div class="article-content-analyse">
+                                                    <h3 class="card-title" itemprop="name">Endringer basert på Webaim resultat:</h3>
+                                                        <ol class="listepunkt">
+                                                            <li>Strukturelle endringer: riktig header levels. Slik at man ikke hopper over header-levels, alle innholdssider med unntak av kontakt oss fikk en h2 head og et lite paragraf. Andre endringer, var å gjøre om tabellene fra unik Id til en klasse. Slik at de kan gjenbrukes lettere.</li>
+                                                            <li>Hadde totalt 3 errors i Webaim.org, disse var de nyplasserte sosiale medier knappene i footer. Dette løste jeg ved å søke Google etter empty Links. Løste dette ved å legge til aria-labels.</li>
+                                                            <li>Utenom dette, var jeg spent på kontraster og fargebruk. Den var på linje med A-standarder. Gjør navigasjonsbarsfargen til svart, for å gjøre den enda tydligere.</li>
+                                                            <li>Fjerner all unødig understreking i paragrafene mine, dette kan være forvirrende for lesere. Da de ikke er klikkbare, men kun for illustrasjon. Beholder kun taggen emphasis, for å illustrere noen poeng.</li>
+                                                            <li>Resterende rundt 7 alerts for hele nettsiden, gjør at jeg da gjør om alle artikkelkort kategoriene til kun en enkel tekst. Redunent links, vil si at det er flere linker som lenker til det samme stedet. Beholder kun disse for hjem i navigasjonsbaren, men gjør endring på innholdssidene.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                <div class="article-content"> 
+                                                    <h2 class="card-category">Analyse</h2>
+                                                    <h3 class="card-title" itemprop="name">Webaim resultat: etter endring</h3>
+                                                        <p class="card-text">Resultater fra "lighthouse" testen av websiden, 
+                                                            ga høy score. På rundt 90%, jeg ser og forstår at det er bildene som er et sårt punkt
+                                                            og de gjør mindre "reaktiv" og kan dempe opplastningshastigheten. Utenom dette, ønsker jeg "SEO" litt høyere, slik at siden blir "funnet" kjappere via Google. 
+                                                            Derfor tar jeg inn tipset om Meta description tag, denne gir en hel beskrivelse på din side. 
+                                                            Her er det viktig med en ordentlig beskrivelse, som forklarer godt hva din side faktisk inneholder. 
+                                                        </p>
+                                                        <figure class="article-image-analyse">
+                                                            <img itemprop="image" src="bilder/endring_webaim_med_aria.PNG" alt="Nytt resultat fra Webaim etter å ha lagt inn aria label inn i sosiale medier lenkene.">
+                                                        </figure>
+                                                        <figure class="webaim_analyse">
+                                                            <img itemprop="image" src="bilder/skipped_headerlevel.PNG" alt="En screenshot av et webaim resultat, problemet er strukturelt og det mangler h1 headtags på alle innholdssider.">
+                                                            <img itemprop="image" src="bilder/fjerner_understrek.PNG" alt="en screenshot av et webaim resultat, det er ikke bra for opplesningsverktøy å ha unødig understreking i tekst.">
+                                                        </figure>                                                
+                                                        </div>
+                                                <figure class="webaim_analyse-2">
+                                                    <img itemprop="image" src="bilder/webaim_contrast_aascore.PNG" alt="Skjermbilde av webaim resultat, kontraster følger WCAG-standard på linje med A-standarder.">
+                                                    <img itemprop="image" src="bilder/webaim_analyse.PNG" alt="Skjermbilde av webaim resultat, ca 3 errorer som gjelder missing links. De mangler aria-label.">
+                                                </figure>
+                                                <div class="article-content"> 
+                                                    <h2 class="card-category">Analyse</h2>
+                                                    <h3 class="card-title" itemprop="name">Resultat etter endringer: Webaim og Lighthouse.</h3>
+                                                    <p class="card-text">Resultat etter endringer fra Webaim: slik som fjerning av unødig understreking i paragrafer, riktig strukturell head-level ved å legge inn
+                                                        h1 og følge en god head-level videre på nettsiden. Og til slutt omgjort en del lenker til vanlig overskifter i h2-tags, sitter jeg igjen med 2 alerts. 
+                                                        Dette er på grunn av at navigasjonsbaren "hjem", og bedriftslogo som begge lenker til startsiden. For denne gang ser jeg bort fra dette. Ellers har nettsiden godkjent A-krav for kontraster, men jeg velger å endre navigasjonsbarsfargen til helt svart. For å gjøre den enda tydeligere.<br>
+                                                         <br>Når det gjelder Lighthouse score, har den ligget på rundt 90%. Men jeg har fått økt den til nærmere 100%, når det gjelder SEO ved å legge inn mer microdata for hele nettsiden og har lagt inn
+                                                        description med en forklarende alt tekst. Som forklararer godt hva alle sidenes innhold er, slik at Google og leser kan forstå hva sidene inneholder. Utenom dette, 
+                                                        har bildene vært et sårt punkt, da de gjør siden treg. Dette har jeg fikset ved å sette en max hight og width på 100%. Nå er denne Lighthouse scoren 77%. 
+                                                    </p>
+                                                    <figure class="webaim_img">
+                                                        <img itemprop="image" src="bilder/final_etteralleendringer_webaim.PNG" alt="en screenshot av webaim endringer basert på missing links for sosiale medier.">
+														<img itemprop="image" src="bilder/2_alerts_final_webaim.PNG" alt="en screenshot av webaim endringer basert på missing links for sosiale medier.">
+													</figure>
+													</div>
+												<div class="article-content-analyse">
+                                                    <h3 class="card-title-analyse" itemprop="name">Noen tips for å øke brukervennelighet:</h3>
+                                                         <p class="card-text">Underveis i denne eksamen, har jeg benyttet mer av Google for søk etter svar, mer bruk av validatoren underveis for å dobbeltsjekke at alt fungerer.
+                                                                    Og blitt mer bevisst på hvordan alt på en nettside fungerer og opererer sammen. God universell utforming har en effekt på 
+                                                                    hvordan siden din fremstår og påvirker SEO. Fordi du må gjøre tiltak for å forbedre din nettside, slik som å legge til Aria, Microdata og 
+                                                                    se over struktur og oppbygging av nettsiden. Resultatene på Webaim og Lighthouse, er nå høynet og jeg er fornøyd med resultatet etter endringene.
+                                                                </p>
+                                                    </div>
+													
+                            <section class="tabell-section">
+                                <h2 class="caption" itemprop="name">WCAG Standard - resultat:</h2>
+                                <div id="tabell-analyse">
+                                    <div class="tb-overskrift">A</div>
+                                    <div class="tb-overskrift">AA</div>
+                                    <div class="tb-overskrift">AAA</div>
+                                    
+                                    <div class="tb-text">All ikke tekstlig innhold, skal ha alternativ tekst</div>
+                                    <div class="tb-text">Bruk av farger, skal ha mening i bruk av formidling av informasjon</div>
+                                    <div class="tb-text">Alle sider har titler</div>
+                                    <div class="tb-text">Semantiske tagger, har en start og slutt tagg</div>
+                
+                                    <div class="tb-text">Headings og etiketter forklarer meningen</div>
+                                    <div class="tb-text">Bilder har tekst, som forklarer bildene</div>
+                                    <div class="tb-text">Kontrast minimum, tekst er i en passelig størrelse</div>
+                                    <div class="tb-text">Navigasjonen er konsistent, lik på alle sider</div>
+                                    
+                                    <div class="tb-text-nede">Seksjons heading, for å strukturere innholdet</div>
+                                    <div class="tb-text-nede">Linkene gir mening, for hvor brukeren havner</div>
+                                    <div class="tb-text-nede">Tastatur mulighet, mulighet å bruke tab-tasten for navigasjon</div>
+                                </div>
+                                <a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#non-text-content">Tilgjengelighetserklæringen: WCAG-standard</a>
+                            </section>
+                           
+                            <section class="tabell-section">
+                                <h2 class="caption" itemprop="name">Resultat og endringer:</h2>
+                                <div id="tabell">
+                                    <div class="tb-overskrift"></div>
+                                    <div class="tb-overskrift">Resultat</div>
+                                    <div class="tb-overskrift">Endringer</div>
+                                    <div class="tb-overskrift">Ny score</div>
+                                    <div class="tb-overskrift">Kommentarer</div>
+                                    
+                                    <div class="tb-text"><b>Webaim:</b></div>
+                                    <div class="tb-text">Hadde 3 errors, tomme linker. Og rundt 7 alerts "rendundant links", manglende h1-overskrifter og missvisende "underline" i paragrafer.</div>
+                                    <div class="tb-text">Aria-label på sosiale medier linkene, fjernet overflødig lenker som linker til samme sted. La til h1-tag på alle innholdssider. Tok bort underline i tekst, da det er missvisende.</div>
+                                    <div class="tb-text">Ingen røde errors, kun 1-2 alerts med det gjelder "hjem" i navigasjonsbaren. Fordi logo og hjem, fører til samme sted.</div>
+                                    <div class="tb-text">Blitt mer kjent med bruken av Aria, både label og sette true=hidden. Og føre god HTML-struktur, endret på navigasjonsbarsfargen til helt svart. Slik at den er endre tydeligere.</div>
+                
+                                    <div class="tb-text"><b>Lighthouse:</b></div>
+                                    <div class="tb-text">Desktop: 90%, Mobil: 53%</div>
+                                    <div class="tb-text">Sette max-width og height på bildene</div>
+                                    <div class="tb-text">Desktop: rundt 100%, Mobil: 77%</div>
+                                    <div class="tb-text">Mer bevisst på bildestørrelse og hvordan det påvirker performance</div>
+                
+                                    <div class="tb-text-nede"><b>SEO score:</b></div>
+                                    <div class="tb-text-nede">Score på rundt 90%</div>
+                                    <div class="tb-text-nede">Mer microdata og description</div>
+                                    <div class="tb-text-nede">Nærmere 100%</div>
+                                    <div class="tb-text-nede">Gøy å se at de endringene man gjør, har en effekt på scoren</div>
+                                </div>
+                            </section> 
+                        <section itemscope id="kilder">
+                            <h2 class="kilder-head" itemprop="name">Kilder brukt:</h2>
+                            <ul class="kilder-links">
+                                <li><a href="https://schema.org/Article">Microdata: For article</a></li>
+                                <li><a href="https://www.w3schools.com/howto/howto_html_favicon.asp">Favicon: w3schools</a></li>
+                                <li><a href="https://www.w3schools.com/html/html_formatting.asp">Lag tabell: Div-taggen</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=wRjvGURoIcg">Fontawasome: Cdn-link</a></li>
+                                <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#non-text-content">WCAG: standard</a></li>
+                                <li><a href="https://webaim.org/">Webaim: Verktøy</a></li>  
+                                <li><a href="https://web.dev/meta-description/?utm_source=lighthouse&utm_medium=devtools">Lighthouse: Meta-description</a></li> 
+                                <li><a href="https://equalizedigital.com/accessibility-checker/empty-link/ ">Webaim: Empty link</a></li>  
+                                <li><a href="https://validator.w3.org/">Validator</a></li>
+                            </ul>
+                        </section>
+                    </main>
+                    <footer id="footer">
+                        <p>Henriette Hestsveen&copy;</p>
+                        <ul itemscope class="someicons">
+                            <li><a class="appen" href="index.html"><img itemprop="image" id="app" src="appikon/app_ikon.png" alt="Applikasjons logo"></a></li>
+                            <li><a href="https://www.facebook.com/Henriettetinahestsveen/" aria-label="Gå til Facebook side"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/viponordic/" aria-label="Gå til Instagram side"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://github.com/Henriettehe" aria-label="Gå til Github side"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </footer>
+            </div>
+        <script src="js/ham.js"></script>
+
+    </body>
+</html>
+
